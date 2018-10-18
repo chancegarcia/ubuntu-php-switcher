@@ -1,10 +1,13 @@
 #!/bin/bash
-# @author chance@chancegarcia.com
+# creator: Chance Garcia <chance@chancegarcia.com>
+# twitter: chancegarcia
 
 if [ ! -e /usr/bin/lsb_release ]; then
     echo "unable to find lsb_release to check for ubuntu system. only use this on ubuntu"
     exit 1
 fi
+
+# todo use/parse lsb_release to verify ubuntu
 
 if [ ! $# -eq 1 ]; then
     echo "please specify a php version to swtich to"
@@ -13,7 +16,7 @@ else
     if [[ $1 =~ [0-9]\.[0-9]+? ]]; then
         switch_to=$1
     else
-        echo "invalid paramenter"
+        echo "invalid version number"
         exit 1
     fi
 fi
@@ -26,8 +29,11 @@ echo "this will require sudo priveleges"
 
 echo "switching CLI"
 sudo update-alternatives --set php /usr/bin/php$switch_to
+# todo add phar, etc?
 
 echo "switching apache"
 sudo a2dismod php$switch_from;
 sudo a2enmod php$switch_to;
 sudo service apache2 restart
+
+echo "php switch to $switch_to is now complete"
