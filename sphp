@@ -25,7 +25,7 @@ echo "switch to PHP $switch_to"
 
 switch_from=`php --version | grep -oP "PHP (\d\.\d+?)" | cut -d " " -f2`
 echo "switch from PHP $switch_from"
-echo "this will require sudo priveleges"
+echo "this will require sudo privileges"
 
 echo "switching CLI"
 sudo update-alternatives --set php /usr/bin/php$switch_to
