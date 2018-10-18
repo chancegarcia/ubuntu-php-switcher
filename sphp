@@ -1,6 +1,10 @@
 #!/bin/bash
-
 # @author chance@chancegarcia.com
+
+if [ ! -e /usr/bin/lsb_release ]; then
+    echo "unable to find lsb_release to check for ubuntu system. only use this on ubuntu"
+    exit 1
+fi
 
 if [ ! $# -eq 1 ]; then
     echo "please specify a php version to swtich to"
