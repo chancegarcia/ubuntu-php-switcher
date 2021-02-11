@@ -1,5 +1,5 @@
 # Ubuntu PHP Switcher
-Ubuntu PHP switcher is a simple script to switch your Apache and CLI configs quickly between major versions of PHP.
+Ubuntu PHP switcher is a simple script to switch your Apache and CLI configs quickly between major versions of PHP. This supports any version of php installed onto the ubuntu system
 
 If you support multiple products/projects that are built using either brand new or old legacy PHP functionality and you find it a pain to change config files continually this will make the whole process just one command.
 
