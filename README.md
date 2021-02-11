@@ -6,7 +6,7 @@ If you support multiple products/projects that are built using either brand new 
 ## Caveats
 **requires sudo**
 
-For use with Ubuntu (not tested on other linux systems). For OSX php switching, I recommend [brew php switcher by phil cook](https://github.com/philcook/brew-php-switcher).
+For use with Ubuntu (not tested on other linux systems). For OSX php switching, I recommend [brew php switcher by phil cook](https://github.com/philcook/brew-php-switcher). Apparently this script could resolve [Ports to Linux? #62](https://github.com/philcook/brew-php-switcher/issues/62) in the `brew-php-switcher` issues.
 
 This does not check the validity of the version given or if that version exists/is installed on the system.
 
